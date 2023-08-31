@@ -1,4 +1,7 @@
-# Still on variables
-name = input("Name: ")
-# print("hello," + name)
-print(f"hello, {name}") # formatted string
+# Variables
+a = 28  # int
+b = 1.5  # float
+c = "Hello!"  # string (str)
+d = True  # Boolean (bool)
+e = False  # Bool
+f = None # NoneType
