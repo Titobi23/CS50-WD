@@ -1,5 +1,5 @@
 # Define a list of names
-names = ["Potter", "Ron", "Hermione", "Ginny", "voldemort"]
+names = ["Potter", "Ron", "Hermione", "Dumbledore", "Hagrid" "voldemort"]
 
 print(names)
 
@@ -7,6 +7,6 @@ print(names)
 names.append("Draco")
 print(names)
 
-# sorting
+# sorting lists
 names.sort()
 print(names)
