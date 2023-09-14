@@ -25,12 +25,12 @@
     INSERT INTO "Table name" (keys) VALUE (Value for keys);
 
     <p>Example</p>
-    INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'London', 415);
-    INSERT INTO flights (origin, destination, duration) VALUES ('Shanghai', 'Paris', 760);
-    INSERT INTO flights (origin, destination, duration) VALUES ('Istanbul', 'Tokyo', 700);
-    INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'Paris', 435);
-    INSERT INTO flights (origin, destination, duration) VALUES ('Moscow', 'Paris', 245);
-    INSERT INTO flights (origin, destination, duration) VALUES ('Lima', 'New York', 455);
+    <p>INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'London', 415);</p>
+    <p>INSERT INTO flights (origin, destination, duration) VALUES ('Shanghai', 'Paris', 760);</p>
+    <p>>INSERT INTO flights (origin, destination, duration) VALUES ('Istanbul', 'Tokyo', 700);</p>
+    <p>INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'Paris', 435);</p>
+    <p>INSERT INTO flights (origin, destination, duration) VALUES ('Moscow', 'Paris', 245);</p>
+    <p>INSERT INTO flights (origin, destination, duration) VALUES ('Lima', 'New York', 455);</p>
 
     SELECT * FROM "Table Name"
 
@@ -39,11 +39,11 @@
     This is to better organise the table.
 
     <p>Examples of SELECT</p>
-    SELECT * FROM flights WHERE origin = 'New York';
-    sqlite> SELECT * FROM flights WHERE duration > 500;
-    SELECT * FROM flights WHERE duration > 500 AND destination = 'Paris';
-    SELECT * FROM flights WHERE origin IN ('New York', 'Lima');
-    SELECT * FROM flights WHERE origin LIKE '%a%';
+    <p>SELECT * FROM flights WHERE origin = 'New York';</p>
+    <p>SELECT * FROM flights WHERE duration > 500;</p>
+    <p>SELECT * FROM flights WHERE duration > 500 AND destination = 'Paris';</p>
+    <p>SELECT * FROM flights WHERE origin IN ('New York', 'Lima');</p>
+    <p>SELECT * FROM flights WHERE origin LIKE '%a%';</p>
     <p>There are many more functions like: </p>
     <ul>
         <li>AVERAGE</li>
@@ -51,10 +51,32 @@
         <li>MAX</li>
         <li>MIN</li>
         <li>SUM</li>
-        <li>And so on</li>
+        <li>And so on...</li>
     </ul>
 
-    
+    UPDATE
+    <p>Example</p>
+    UPDATE flights SET duration = 430 WHERE origin='New York' AND destination ='London';
+
+    DELETE
+    <p>Example</p>
+    DELETE from flights where destination = 'Tokyo';
+
+    <p>Some other Clauses are:</p>
+    <ul>
+        <li>LIMIT</li>
+        <li>ORDER BY</li>
+        <li>GROUP BY</li>
+        <li>HAVING</li>
+        <li>And so on...</li>
+    </ul>
+
+    <h2>Dealing With Larger Data</h2>
+    JOIN
+    <p>Example</p>
+    SELECT first, origin , destination, FROM flights JOIN passengers ON passengers.flight_id = flights.id;
+
+
 
 
 </body>
