@@ -17,12 +17,16 @@
     <p>sqlite3 ("filename".sql/db) - create database</p>
 
     <p>CREATE TABLE "table name" (table content);</p>
+    <br>
+        ALTER TABLE table_name</br>
+        ADD column_name data_type;
+    </p>
 
     <p>Example</p>
 
-    CREATE TABLE flights (id INTEGER PRIMARY KEY AUTOINCREMENT, origin TEXT NOT NULL, destination TEXT NOT NULL, duration INTEGER NOT NULL);
+    <p>CREATE TABLE flights (id INTEGER PRIMARY KEY AUTOINCREMENT, origin TEXT NOT NULL, destination TEXT NOT NULL, duration INTEGER NOT NULL);</p>
 
-    INSERT INTO "Table name" (keys) VALUE (Value for keys);
+    <p>INSERT INTO "Table name" (keys) VALUE (Value for keys);</p>
 
     <p>Example</p>
     <p>INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'London', 415);</p>
@@ -75,7 +79,38 @@
     JOIN
     <p>Example</p>
     SELECT first, origin , destination, FROM flights JOIN passengers ON passengers.flight_id = flights.id;
+    <p>JOIN is used to join two tables</p>
+    <p>Other JOIN queriieare: </p>
+    <ul>
+        <li>JOIN / INNER JOIN</li>
+        <li>LEFT OUTER JOIN</li>
+        <li>RIGHT OUTER JOIN</li>
+        <li>FULL OUTER JOIN</li>
+    </ul>
+    
+    <p>CREATE INDEX</p>
+    <p>Makes queries more effiecient.</p>
 
+    CREATE INDEX name_index ON passenegrs (last);
+
+    <h3>SQL Injection</h3>
+    
+    <h3>Race Conditions</h3>
+
+
+    <h1>MIGRATIONS</h1>
+
+    <p>python manage.py makemigrations</p>
+
+    <p>python manage.py migrate</p>
+
+    <p>python manage.py shell</p>
+
+    <p>from flights.models import Flight </p>
+    
+    <p>f = Flight(origin='New York', destination='London', duration=415)</p>
+
+    <p>f.save()</p>
 
 
 
